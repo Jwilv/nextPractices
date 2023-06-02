@@ -1,14 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
+import stylesNav from '../../styles/Navbar.module.css'
 
 export const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li> <Link href={"/"}>Home</Link> </li>
-                <li> <Link href={"/about"}>about</Link> </li>
-                <li> <Link href={"/contact"}>contact</Link> </li>
-            </ul>
+        <nav className={stylesNav['nav-container']}>
+            <Link href={"/"}>Home</Link>
+            <Link href={"/about"}>about</Link>
+            <Link href={"/contact"}>contact</Link>
         </nav>
     )
 }
