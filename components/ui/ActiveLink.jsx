@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const styles = {
@@ -7,9 +8,12 @@ const styles = {
 }
 
 export const ActiveLink = ({ text, href }) => {
+
+    const {asPath} = useRouter()
+
     return (
         <Link href={href}>
-            <span style={styles}>{text}</span>
+            <span style={ (asPath === href) ? styles : null }>{text}</span>
         </Link>
     )
 }
