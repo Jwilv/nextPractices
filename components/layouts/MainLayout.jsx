@@ -1,4 +1,7 @@
+import Head from 'next/head'
+import { Navbar } from '../ui'
 import React from 'react'
+import styles from '../../styles/Home.module.css'
 
 export const MainLayout = ({ children }) => {
     return (
@@ -13,8 +16,8 @@ export const MainLayout = ({ children }) => {
 
             <Navbar />
 
-            <main className={`${styles.main} ${inter.className}`}>
-                { children }
+            <main className={`${styles.main}`}>
+                {children}
             </main>
 
         </>
