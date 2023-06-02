@@ -1,7 +1,15 @@
+import Link from 'next/link'
 import React from 'react'
 
-export const ActiveLink = ({text,href}) => {
-  return (
-    <a href={href} >{text}</a>
-  )
+const styles = {
+    color: "#0070f3",
+    textDecoration: "underline",
+}
+
+export const ActiveLink = ({ text, href }) => {
+    return (
+        <Link href={href}>
+            <span style={styles}>{text}</span>
+        </Link>
+    )
 }
