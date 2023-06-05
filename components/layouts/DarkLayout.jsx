@@ -3,7 +3,7 @@
 export const DarkLayout = ({children}) => {
   return (
     <div style={{
-        backgroundColor : "rgba(0,0,0,0.3)",
+        backgroundColor : "rgba(105, 49, 49, 0.926)",
         borderRadius : "5px",
         padding : "10px"
     }}>
